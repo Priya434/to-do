@@ -9,14 +9,14 @@ const list = document.querySelector("#list");
 addBtn.addEventListener("click", addItem);
 window.addEventListener("keydown", eventCheck);
 
-// function for event listener
+// check event listener type
 function eventCheck(event) {
     if (event.type = "keydown") {
         if (event.key === "Enter") addItem();
     }
 }
 
-// function to check if input is empty
+// check if input is empty
 function addItem() {
     const inputTxt = document.querySelector("#input_text");
 
@@ -26,7 +26,7 @@ function addItem() {
     inputTxt.focus();
 }
 
-// function to add list item
+// add list item
 function addListItem(text) {
     const listItem = document.createElement("li");
     
@@ -43,7 +43,7 @@ function addListItem(text) {
     list.appendChild(listItem);
 }
 
-// on opening window
+// load window
 window.onload = () => {
     const inputTxt = document.querySelector("#input_text");
     // inputTxt.focus();
