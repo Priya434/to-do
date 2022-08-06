@@ -2,15 +2,12 @@
 
 // global constants
 const addBtn = document.querySelector("#add_btn");
-const removeBtn = document.querySelectorAll(".remove-li");
+const list = document.querySelector("#list");
 
 // event listener
 addBtn.addEventListener("click", inputCheck);
 window.addEventListener("keydown", eventCheck);
-
-for (let i = 0; i < removeBtn.length; i++) {
-    removeBtn[i].addEventListener("click", removeListItem);
-}
+list.addEventListener("click", removeListItem);
 
 // check event listener type
 function eventCheck(event) {
@@ -45,13 +42,16 @@ function addListItem(text) {
 
     listItem.appendChild(listItemBtn);
 
-    const list = document.querySelector("#list");
     list.appendChild(listItem);
 }
 
 // remove list item
 function removeListItem(event) {
-    
+    const listItem = event.target;
+
+    if (listItem.classList.contains("remove-li")) {
+        listItem.parentElement.remove();
+    }
 }
 
 // load window
