@@ -6,18 +6,18 @@ const addBtn = document.querySelector("#add_btn");
 const list = document.querySelector("#list");
 
 // event listener
-addBtn.addEventListener("click", addItem);
+addBtn.addEventListener("click", inputCheck);
 window.addEventListener("keydown", eventCheck);
 
 // check event listener type
 function eventCheck(event) {
     if (event.type = "keydown") {
-        if (event.key === "Enter") addItem();
+        if (event.key === "Enter") inputCheck();
     }
 }
 
 // check if input is empty
-function addItem() {
+function inputCheck() {
     const inputTxt = document.querySelector("#input_text");
 
     if (inputTxt.value !== "") addListItem(inputTxt.value);
