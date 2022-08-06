@@ -29,8 +29,15 @@ function addItem() {
 // function to add list item
 function addListItem(text) {
     const listItem = document.createElement("li");
+    
     const listItemTxt = document.createTextNode(text);
     listItem.appendChild(listItemTxt);
+
+    const listItemBtn = document.createElement("button");
+    const listItemBtnTxt = document.createTextNode("Remove");
+    listItemBtn.appendChild(listItemBtnTxt);
+
+    listItem.appendChild(listItemBtn);
 
     const list = document.querySelector("#list");
     list.appendChild(listItem);
