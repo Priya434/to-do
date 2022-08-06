@@ -1,13 +1,16 @@
 // @ts-check
 
 // global constants
-const input = document.querySelector("#input_text");
 const addBtn = document.querySelector("#add_btn");
-const list = document.querySelector("#list");
+const removeBtn = document.querySelectorAll(".remove-li");
 
 // event listener
 addBtn.addEventListener("click", inputCheck);
 window.addEventListener("keydown", eventCheck);
+
+for (let i = 0; i < removeBtn.length; i++) {
+    removeBtn[i].addEventListener("click", removeListItem);
+}
 
 // check event listener type
 function eventCheck(event) {
@@ -34,6 +37,9 @@ function addListItem(text) {
     listItem.appendChild(listItemTxt);
 
     const listItemBtn = document.createElement("button");
+    listItemBtn.setAttribute("type", "button");
+    listItemBtn.setAttribute("class", "remove-li");
+
     const listItemBtnTxt = document.createTextNode("Remove");
     listItemBtn.appendChild(listItemBtnTxt);
 
@@ -41,6 +47,11 @@ function addListItem(text) {
 
     const list = document.querySelector("#list");
     list.appendChild(listItem);
+}
+
+// remove list item
+function removeListItem(event) {
+    
 }
 
 // load window
