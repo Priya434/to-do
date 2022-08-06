@@ -47,15 +47,18 @@ function addListItem(text) {
 
 // remove list item
 function removeListItem(event) {
-    const listItem = event.target;
+    const btn = event.target;
+    const listItem = event.target.parentElement;
 
-    if (listItem.classList.contains("remove-li")) {
-        listItem.parentElement.remove();
+    if (btn.classList.contains("remove-li")) {
+        listItem.remove();
     }
 }
 
 // load window
+/*
 window.onload = () => {
     const inputTxt = document.querySelector("#input_text");
-    // inputTxt.focus();
+    inputTxt.focus();
 };
+*/
