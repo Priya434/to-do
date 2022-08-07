@@ -10,7 +10,22 @@ li {
 }
 
 body {
+    line-height: 1.5;
     min-height: 100vh;
     text-rendering: optimizeSpeed;
-    line-height: 1.5;
-  }
+}
+
+main,
+#input_text {
+    font-family: sans-serif;
+    font-size: 1.1rem;
+}
+
+#input_text {
+    background-color: aliceblue;
+    border: 2px solid yellowgreen;
+    color: rgb(29, 70, 255);
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    width: 40%;
+}
