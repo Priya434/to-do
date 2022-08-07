@@ -38,6 +38,7 @@ li {
     flex-flow: row nowrap;
     gap: 1em;
     justify-content: center;
+
     margin: 1em 0;
 }
 
@@ -50,7 +51,7 @@ li {
 #input_text {
     background-color: aliceblue;
     border: 1px solid cornflowerblue;
-    color: blue;
+    color: green;
     outline: 1px solid cornflowerblue;
     width: 40%;
 }
@@ -72,19 +73,24 @@ ul {
     border: 2px solid black;
     border-radius: 5px;
     /* ........... */
+    margin: 1em 0;
+    padding: 1em;
 
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    margin: 1em 0;
-    padding: 1em;
 }
 
 li {
     background-color: rgb(187, 226, 241);
     border: 2px solid cornflowerblue;
     border-radius: 5px;
-    color: rgb(245, 71, 100);
-    width: 50%;
+    color: rgb(160, 75, 217);
+    overflow-x: auto;
     padding: 1em;
+    width: 50%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
 }
