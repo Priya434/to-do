@@ -86,11 +86,25 @@ li {
     border: 2px solid cornflowerblue;
     border-radius: 5px;
     color: rgb(160, 75, 217);
+    font-size: 1.25rem;
     overflow-x: auto;
     padding: 1em;
     width: 50%;
 
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
 }
+/* ................... */
+
+/* Remove list item buttons */
+.remove-li {
+    background-color: lightpink;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+    font-size: 0.9rem;
+    padding: 0.5em;
+}
+/* ........................ */
