@@ -1,3 +1,4 @@
+/* global styles */
 *,
 *::before,
 *::after {
@@ -15,11 +16,15 @@ body {
     text-rendering: optimizeSpeed;
 }
 
+/* .................... */
+
 h1 {
     margin: 0.5em;
     padding: 0.25em;
     text-align: center;
 }
+
+/* Input Area */
 
 main,
 #input_text {
@@ -27,7 +32,8 @@ main,
     font-size: 1.1rem;
 }
 
-#input_area {
+#input_area,
+li {
     display: flex;
     flex-flow: row nowrap;
     gap: 1em;
@@ -54,4 +60,31 @@ main,
     border: none;
     color: white;
     font-size: 1rem;
+}
+
+/* .................... */
+
+
+/* list and list items */
+ul {
+    /* to be deleted */
+    background-color: rgb(236, 225, 247);
+    border: 2px solid black;
+    border-radius: 5px;
+    /* ........... */
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 1em 0;
+    padding: 1em;
+}
+
+li {
+    background-color: rgb(187, 226, 241);
+    border: 2px solid cornflowerblue;
+    border-radius: 5px;
+    color: rgb(245, 71, 100);
+    width: 50%;
+    padding: 1em;
 }
