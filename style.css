@@ -36,8 +36,9 @@ main,
 
 #input_text {
     background-color: aliceblue;
-    border: 2px solid yellowgreen;
-    color: rgb(29, 70, 255);
+    border: 1px solid cornflowerblue;
+    color: blue;
+    outline: 1px solid cornflowerblue;
     width: 40%;
 }
 
