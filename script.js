@@ -29,7 +29,7 @@ function inputCheck() {
 // add list item
 function addListItem(text) {
     const listItem = document.createElement("li");
-    
+
     const listItemTxt = document.createTextNode(text);
     listItem.appendChild(listItemTxt);
 
