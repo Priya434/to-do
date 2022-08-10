@@ -2,10 +2,12 @@
 
 // global constants
 const addBtn = document.querySelector("#add_btn");
+const resetBtn = document.querySelector("#reset_btn");
 const list = document.querySelector("#list");
 
 // event listener
 addBtn.addEventListener("click", inputCheck);
+resetBtn.addEventListener("click", resetList);
 window.addEventListener("keydown", eventCheck);
 list.addEventListener("click", removeListItem);
 
@@ -53,6 +55,11 @@ function removeListItem(event) {
     if (btn.classList.contains("remove-li")) {
         listItem.remove();
     }
+}
+
+// reset list
+function resetList() {
+    list.textContent = "";
 }
 
 // load window
