@@ -5,12 +5,15 @@
     box-sizing: border-box;
 }
 
+body,
 h1,
 li {
     margin: 0;
+    padding: 0;
 }
 
 body {
+    background-color: rgb(236, 225, 247);
     line-height: 1.5;
     min-height: 100vh;
     text-rendering: optimizeSpeed;
@@ -19,6 +22,9 @@ body {
 /* .................... */
 
 h1 {
+    color: cadetblue;
+    font-family: serif;
+    font-size: 2.5rem;
     margin: 0.5em;
     padding: 0.25em;
     text-align: center;
@@ -45,12 +51,16 @@ main,
     padding: 0.5em 1em;
 }
 
+#input_text,
+li {
+    width: 75%;
+}
+
 #input_text {
     background-color: aliceblue;
     border: 1px solid cornflowerblue;
     color: green;
     outline: 1px solid cornflowerblue;
-    width: 40%;
 }
 
 .input_area_btn {
@@ -73,13 +83,8 @@ main,
 
 /* list and list items */
 ul {
-    /* to be deleted */
-    background-color: rgb(236, 225, 247);
-    border: 2px solid black;
-    border-radius: 5px;
-    /* ........... */
     margin: 2em 0;
-    padding: 1em;
+    padding: 1em 0;
 
     display: flex;
     flex-flow: column nowrap;
@@ -94,8 +99,7 @@ li {
     color: rgb(160, 75, 217);
     font-size: 1.25rem;
     overflow-x: auto;
-    padding: 1em;
-    width: 50%;
+    padding: 0.5em;
 
     display: flex;
     flex-flow: row wrap;
@@ -116,3 +120,43 @@ li {
 }
 
 /* ........................ */
+
+/* media queries */
+
+/* screen */
+@media screen and (min-width: 500px) {
+
+    #input_text,
+    li {
+        width: 60%;
+    }
+
+    li {
+        padding: 0.75em;
+    }
+}
+
+@media screen and (min-width: 640px) {
+
+    #input_text,
+    li {
+        width: 50%;
+    }
+
+    li {
+        padding: 0.8em;
+    }
+}
+
+@media screen and (min-width: 960px) {
+
+    #input_text,
+    li {
+        width: 40ch;
+    }
+
+    li {
+        padding: 1em;
+    }
+}
+/* ...... */

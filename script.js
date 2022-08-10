@@ -7,6 +7,9 @@ const list = document.querySelector("#list");
 
 // global variables
 let data = [];
+if (localStorage.length !== 0) {
+    data = [...localStorage.getItem("to-do").split(" | ")];
+}
 
 // event listener
 addBtn.addEventListener("click", inputCheck);
