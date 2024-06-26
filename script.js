@@ -68,6 +68,9 @@ function removeListItem(event) {
     if (btn.classList.contains("remove-li")) {
         listItem.remove();
     }
+
+    const inputTxt = document.querySelector("#input_text");
+    inputTxt.focus();
 }
 
 // reset list
@@ -76,6 +79,9 @@ function resetList() {
 
     localStorage.clear();
     data = [];
+
+    const inputTxt = document.querySelector("#input_text");
+    inputTxt.focus();
 }
 
 // load list on site load
@@ -104,6 +110,6 @@ function loadList() {
 
 window.onload = () => {
     const inputTxt = document.querySelector("#input_text");
-    // inputTxt.focus();
     loadList();
+    inputTxt.focus();
 };
