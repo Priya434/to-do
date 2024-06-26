@@ -8,7 +8,7 @@ const list = document.querySelector("#list");
 // global variables
 let data = [];
 if (localStorage.length !== 0) {
-    data = [...localStorage.getItem("to-do").split(" | ")];
+    data = JSON.parse(localStorage.getItem("to-do"))
 }
 
 // event listener
@@ -41,7 +41,7 @@ function addListItem(text) {
     const listItemTxt = document.createTextNode(text);
     listItem.appendChild(listItemTxt);
     data.push(text);
-    localStorage.setItem("to-do", data.join(" | "));
+    localStorage.setItem("to-do", JSON.stringify(data));
 
     const listItemBtn = document.createElement("button");
     listItemBtn.setAttribute("type", "button");
@@ -60,10 +60,10 @@ function removeListItem(event) {
     const btn = event.target;
     const listItem = event.target.parentElement;
 
-    console.log(listItem.textContent.slice(0, -6));
+    // console.log(listItem.textContent.slice(0, -6));
     const liLocalStorage = data.indexOf(listItem.textContent.slice(0, -6));
     data.splice(liLocalStorage, 1);
-    localStorage.setItem("to-do", data.join(" | "));
+    localStorage.setItem("to-do", JSON.stringify(data));
 
     if (btn.classList.contains("remove-li")) {
         listItem.remove();
